@@ -73,12 +73,28 @@ console.log('~~~~~~~~~ 2 Loops A. The basics~~~~~~~~');
 for(let h=0; h<10;h++){
     console.log(h);
 }
+// let h = 0;
+// while (h < 10) {
+//     console.log(h);
+//     h++;
+// }
+
 for(let n=10; n<=400;n++){
     console.log(n);
 }
+let n = 10;
+// while (n <= 400) {
+//     console.log(n);
+//     n++;
+// }
 for(let m=12;m<4000; m+=2){
     console.log(m);
 }
+// let m = 12;
+// while (m < 4000) {
+//     console.log(m);
+//     m += 2;
+// }
 
 // ============================================================================================
 console.log('~~~~~~~~~ 2 Loops B. Get even  ~~~~~~~~');
@@ -90,6 +106,15 @@ console.log('~~~~~~~~~ 2 Loops B. Get even  ~~~~~~~~');
         }
         console.log(`${k} is odd number`);
     }
+//     let k = 1;
+// while (k <= 100) {
+//     if (k % 2 === 0) {
+//         console.log(`${k} is even number`);
+//     } else {
+//         console.log(`${k} is odd number`);
+//     }
+//     k++;
+// }
 
 // ============================================================================================
 console.log('~~~~~~~~~ 2 Loops C. Give me Five ~~~~~~~~');
@@ -104,6 +129,17 @@ for (let s = 0; s<=100; s++){
     }
 }
 
+// let s = 0;
+// while (s <= 100) {
+//     if (s % 5 === 0 && s !== 0) {
+//         console.log(`I found a ${s}. High five!`);
+//     } else if (s % 3 === 0 && s % 5 !== 0) {
+//         console.log(`I found a number. ${s} is a crowd`);
+//     } else if (s % 3 === 0 && s % 5 === 0 && s !== 0) {
+//         console.log(`I found a ${s}. High five and crowd!`);
+//     }
+//     s++;
+// }
 // ============================================================================================
 console.log('~~~~~~~~~ 2 Loops D. Savings account ~~~~~~~~');
 
@@ -117,7 +153,13 @@ for (let l = 1; l<10; l++){
 }
 console.log(bank_account);
 
-
+// let bank_account = 0;
+// let l = 1;
+// while (l < 10) {
+//     bank_account += l * 2;
+//     l++;
+// }
+// console.log(bank_account);
     // ============================================================================================
 console.log('~~~~~~~~~ 3F Biggie Smalls ~~~~~~~~');
 
