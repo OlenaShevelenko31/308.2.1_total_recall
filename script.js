@@ -63,6 +63,62 @@ let age = 27;
     }
 
     // ============================================================================================
+console.log('~~~~~~~~~ 2 Loops A. The basics~~~~~~~~');
+
+// A. The basics
+// Write a loop that will print out all the numbers from 0 to 10, inclusive
+// Write a loop that will print out all the numbers from 10 up to and including 400
+// Write a loop that will print out every third number starting with 12 and going no higher than 4000
+
+for(let h=0; h<10;h++){
+    console.log(h);
+}
+for(let n=10; n<=400;n++){
+    console.log(n);
+}
+for(let m=12;m<4000; m+=2){
+    console.log(m);
+}
+
+// ============================================================================================
+console.log('~~~~~~~~~ 2 Loops B. Get even  ~~~~~~~~');
+// Print out the numbers that are within the range of 1 - 100
+// Adjust your code to add a message next to even numbers only that says: "is an even number"
+    for (let k = 1;k<=100;k++){
+        if(k%2===0){
+            console.log(`${k} is even number`);
+        }
+        console.log(`${k} is odd number`);
+    }
+
+// ============================================================================================
+console.log('~~~~~~~~~ 2 Loops C. Give me Five ~~~~~~~~');
+
+for (let s = 0; s<=100; s++){
+    if(s%5===0 && i !== 0){
+        console.log(`I found a ${s}. High five!`);
+    } else if(s%3===0){
+        console.log(`I found a number. ${s} is a crowd`)
+    } else if(s%3===0 && s%5===0 && i !== 0){
+        console.log(`I found a ${s}. High five and crowd!`);
+    }
+}
+
+// ============================================================================================
+console.log('~~~~~~~~~ 2 Loops D. Savings account ~~~~~~~~');
+
+// Write code that will save the sum of all the numbers between 1 - 10 to a variable called bank_account.
+// Check your work! Your bank_account should have $55 in it.
+// You got a bonus! Your pay is now doubled each week. Write code that will save the sum of all the numbers between 1 - 100 multiplied by 2.
+
+let bank_account = 0;
+for (let l = 1; l<10; l++){
+    bank_account += l *2;
+}
+console.log(bank_account);
+
+
+    // ============================================================================================
 console.log('~~~~~~~~~ 3F Biggie Smalls ~~~~~~~~');
 
 let num = 6;
@@ -81,6 +137,7 @@ console.log('~~~~~~~~~ 3G Monkey in the Middle ~~~~~~~~');
     } else {
         console.log("Monkey");
     }
+
 
 
 
