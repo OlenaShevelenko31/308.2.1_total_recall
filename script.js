@@ -120,7 +120,7 @@ console.log('~~~~~~~~~ 2 Loops B. Get even  ~~~~~~~~');
 console.log('~~~~~~~~~ 2 Loops C. Give me Five ~~~~~~~~');
 
 for (let s = 0; s<=100; s++){
-    if(s%5===0 && i !== 0){
+    if(s%5===0 && s !== 0){
         console.log(`I found a ${s}. High five!`);
     } else if(s%3===0){
         console.log(`I found a number. ${s} is a crowd`)
@@ -160,6 +160,61 @@ console.log(bank_account);
 //     l++;
 // }
 // console.log(bank_account);
+
+
+
+// ============================================================================================
+console.log('~~~~~~~~~ 3B Easy Does It ~~~~~~~~');
+// Create an array that contains three quotes and store it in a variable called quotes.
+const quotes = [
+    "If two wrongs don't make a right, try three. by Laurence J. Peter",
+    "I follow three rules: Do the right thing, do the best you can, and always show people you care. by Laurence J. Peter",
+    "Better three hours too soon than a minute too late. by William Shakespeare."
+]
+console.log(quotes);
+
+// ============================================================================================
+console.log('~~~~~~~~~ 3C Accessing elements ~~~~~~~~');
+
+const randomThings = [1, 10, "Hello", true];
+console.log(randomThings[0]); // Output: 1
+console.log(randomThings[2]); // Output: "Hello"
+console.log(randomThings[3]); // Output: true
+
+randomThings[2] = "World";
+console.log(randomThings); // 1,10, "World", true
+
+
+// ============================================================================================
+console.log('~~~~~~~~~ 3D Change values ~~~~~~~~');
+
+const ourClass = ["Salty", "Zoom", "Sardine", "Slack", "Github"];
+console.log(ourClass[2]); // "Sardine"
+ourClass[4]="Octocat";
+ourClass.push("Cloud City");
+console.log(ourClass);
+
+
+// ============================================================================================
+console.log('~~~~~~~~~ 3E Mix It Up ~~~~~~~~');
+// Add the string "Aegon"to the end of the array. Add another string of your choice to the end of the array.
+// Remove the 5 from the beginning of the array.
+// Add the string "Bob Marley"to the beginning of the array.
+// Remove the string of your choice from the end of the array.
+
+// Reverse this array using Array.prototype.reverse(). Did you mutate the array? What does mutate mean? Did the .reverse()method return anything?
+
+const myArray = [5, 10, 500, 20];
+myArray.push("Aegon" , "Euphoria");
+myArray.shift(); 
+myArray.unshift("Bob Marley");
+myArray.pop();
+
+Array.prototype.reverse(myArray);
+myArray.reverse();
+
+console.log(myArray);
+
     // ============================================================================================
 console.log('~~~~~~~~~ 3F Biggie Smalls ~~~~~~~~');
 
@@ -170,6 +225,7 @@ let num = 6;
         console.log(`${num} is bigger the 100.`);
     }
 
+
     // ============================================================================================
 console.log('~~~~~~~~~ 3G Monkey in the Middle ~~~~~~~~');
     if (num <5 ){
@@ -179,6 +235,89 @@ console.log('~~~~~~~~~ 3G Monkey in the Middle ~~~~~~~~');
     } else {
         console.log("Monkey");
     }
+
+
+
+// ============================================================================================
+console.log('~~~~~~~~~ 3H Whats in Your Closet? ~~~~~~~~');
+
+const kristynsCloset = [
+  "left shoe",
+  "cowboy boots",
+  "right sock",
+  "Per Scholas hoodie",
+  "green pants",
+  "yellow knit hat",
+  "marshmallow peeps"
+];
+
+const thomsCloset = [
+    [
+      // These are Thom's shirts
+      "grey button-up",
+      "dark grey button-up",
+      "light blue button-up",
+      "blue button-up",
+    ],[
+      // These are Thom's pants
+      "grey jeans",
+      "jeans",
+      "PJs"
+    ],[
+      // Thom's accessories
+      "wool mittens",
+      "wool scarf",
+      "raybans"
+    ]
+  ];
+
+//   What's Kristyn wearing today? Using bracket notation to access items in kristynsCloset, log the sentence "Kristyn is rocking that " + the third item in Kristyn's closet + " today!" to the console.
+console.log("Kristyn is rocking that " + kristynsCloset[2] + "today!");
+
+// Kristyn just bought some sweet shades! Add "raybans"to her closet after "yellow knit hat".
+let findYellowHat  = kristynsCloset.indexOf('yellow knit hat'); 
+console.log(findYellowHat); //5
+kristynsCloset.splice(6,0, 'raybans')
+console.log(kristynsCloset); 
+
+// Kristyn spilled coffee on her hat... modify this item to read "stained knit hat"instead of yellow.
+kristynsCloset[5] = "stained knit hat";
+console.log(kristynsCloset);
+
+// Put together an outfit for Thom! Using bracket notation, access the first element in Thom's shirtsarray.
+console.log("Thom's shirts are: " + thomsCloset[0]);
+
+// In the same way, access one item from Thom's pants array.
+console.log("Thom's pants are: " + thomsCloset[1]);
+
+// Access one item from Thom's accessories array.
+console.log("Thom's accessories are: " + thomsCloset[2]);
+
+// Log a sentence about what Thom's wearing. Example: "Thom is looking fierce in a grey button-up, jeans and wool scarf!"
+console.log("Thom is looking fierce in" + thomsCloset [0][0] + ", " + thomsCloset[1][1] + " and "  + thomsCloset [2][1] + "!");
+
+// Get more specific about what kind of PJs Thom's wearing this winter. Modify the name of his PJ pants to Footie Pajamas.
+thomsCloset[1][2] = "Footie Pajamas";
+console.log(thomsCloset[1][2]);
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
