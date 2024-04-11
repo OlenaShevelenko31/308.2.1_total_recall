@@ -301,9 +301,105 @@ thomsCloset[1][2] = "Footie Pajamas";
 console.log(thomsCloset[1][2]);
 
 
+// ============================================================================================
+console.log('~~~~~~~~~ Objects A  Make a user object ~~~~~~~~');
+// Create an object called user.
+// Write in to the object the key-value pairs for name, email, age, and purchased. Set the value of purchased to an empty array []. Set the other values to whatever you would like.
+const user = {
+    name: "Oliver",
+    email: "olever.best@gamail.com",
+    age: 29,
+    purchased: []
+};
+console.log(user);
 
 
-  
+// ============================================================================================
+console.log('~~~~~~~~~ Objects B  Update the user ~~~~~~~~');
+// Our user has changed his or her email address. Without changing the original user object, update the email value to a new email address.
+// Our user has had a birthday! Without changing the original user object, increment the age value using the postfix operator. Hint: age++
+
+user.email = "oliver123@gmail.com";
+console.log(user.email);
+
+
+// ============================================================================================
+console.log('~~~~~~~~~ Objects C  Adding keys and values ~~~~~~~~');
+// You have decided to add your user's location to the data that you want to collect.
+// Without changing the original user object, add a new key location to the object, and give it a value or some-or-other location (a string).
+
+user.location = "New York";
+console.log(user.location);
+
+
+// ============================================================================================
+console.log('~~~~~~~~~ Objects D  Shopaholic! ~~~~~~~~');
+// Our user has purchased an item! They have purchased some "carbohydrates". Using .push(), add the string "carbohydrates" to the purchased array.
+// Our user has purchased an item! They have purchased some "peace of mind". Using .push(), add the string "peace of mind" to the purchased array.
+// Our user has purchased an item! They have purchased some "Merino jodhpurs". Using .push(), add the string "Merino jodhpurs" to the purchased array.
+// Console.log just the "Merino jodhpurs" from the purchased array.
+
+user.purchased.push("carbohydrates");
+user.purchased.push("peace of mind");
+user.purchased.push("Merino jodhpurs");
+console.log(user.purchased[user.purchased.length-1]);
+
+
+// ============================================================================================
+console.log('~~~~~~~~~ Objects E  Object-within-object ~~~~~~~~');
+
+user.friend = {
+    name: "Grace Hopper",
+    age: 85,
+    location: "New Jersey",
+    purchased: []
+}
+console.log(user.friend.name); //Console.log just the friend's name
+console.log(user.friend.location); //Console.log just the friend's location
+
+user.friend.age = 55; //CHANGE the friend's age to 55
+console.log(user.friend.age);
+
+// The friend has purchased "The One Ring". Use ``.push()to add "The One Ring" to the friend'spurchased` array.
+user.friend.purchased.push("The One Ring");
+
+//The friend has purchased "A latte". Use .push() to add "A latte" to the friend's purchased array.
+user.friend.purchased.push("A latte");
+
+//Console.log just "A latte" from the friend's purchased array.
+console.log(user.friend.purchased[user.friend.purchased.length-1]);
+
+
+// ============================================================================================
+console.log('~~~~~~~~~ Objects F  Loops ~~~~~~~~');
+// Write a for loop that iterates over the User's purchased array (NOT the friend's purchased array), and prints each element to the console.
+// Write a for loop that iterates over the Friend's purchased array, and prints each element to the console.
+
+
+for (const key in user.purchased){
+    console.log(user.purchased[key]);
+}
+
+for (const key in user.friend.purchased){
+    console.log(user.friend.purchased[key]);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
