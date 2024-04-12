@@ -163,7 +163,7 @@ console.log(bank_account);
 
 
 
-// ============================================================================================
+// *! ============================================================================================
 console.log('~~~~~~~~~ 3B Easy Does It ~~~~~~~~');
 // Create an array that contains three quotes and store it in a variable called quotes.
 const quotes = [
@@ -173,7 +173,7 @@ const quotes = [
 ]
 console.log(quotes);
 
-// ============================================================================================
+// *! ============================================================================================
 console.log('~~~~~~~~~ 3C Accessing elements ~~~~~~~~');
 
 const randomThings = [1, 10, "Hello", true];
@@ -185,7 +185,7 @@ randomThings[2] = "World";
 console.log(randomThings); // 1,10, "World", true
 
 
-// ============================================================================================
+// *! ============================================================================================
 console.log('~~~~~~~~~ 3D Change values ~~~~~~~~');
 
 const ourClass = ["Salty", "Zoom", "Sardine", "Slack", "Github"];
@@ -215,7 +215,7 @@ myArray.reverse();
 
 console.log(myArray);
 
-    // ============================================================================================
+// *! ============================================================================================
 console.log('~~~~~~~~~ 3F Biggie Smalls ~~~~~~~~');
 
 let num = 6;
@@ -226,7 +226,7 @@ let num = 6;
     }
 
 
-    // ============================================================================================
+// *! ============================================================================================
 console.log('~~~~~~~~~ 3G Monkey in the Middle ~~~~~~~~');
     if (num <5 ){
         console.log(`${num} is smaller then 5` );
@@ -238,7 +238,7 @@ console.log('~~~~~~~~~ 3G Monkey in the Middle ~~~~~~~~');
 
 
 
-// ============================================================================================
+// *! ============================================================================================
 console.log('~~~~~~~~~ 3H Whats in Your Closet? ~~~~~~~~');
 
 const kristynsCloset = [
@@ -301,7 +301,7 @@ thomsCloset[1][2] = "Footie Pajamas";
 console.log(thomsCloset[1][2]);
 
 
-// ============================================================================================
+//? ============================================================================================
 console.log('~~~~~~~~~ Objects A  Make a user object ~~~~~~~~');
 // Create an object called user.
 // Write in to the object the key-value pairs for name, email, age, and purchased. Set the value of purchased to an empty array []. Set the other values to whatever you would like.
@@ -314,7 +314,7 @@ const user = {
 console.log(user);
 
 
-// ============================================================================================
+//? ============================================================================================
 console.log('~~~~~~~~~ Objects B  Update the user ~~~~~~~~');
 // Our user has changed his or her email address. Without changing the original user object, update the email value to a new email address.
 // Our user has had a birthday! Without changing the original user object, increment the age value using the postfix operator. Hint: age++
@@ -323,7 +323,7 @@ user.email = "oliver123@gmail.com";
 console.log(user.email);
 
 
-// ============================================================================================
+//? ============================================================================================
 console.log('~~~~~~~~~ Objects C  Adding keys and values ~~~~~~~~');
 // You have decided to add your user's location to the data that you want to collect.
 // Without changing the original user object, add a new key location to the object, and give it a value or some-or-other location (a string).
@@ -332,7 +332,7 @@ user.location = "New York";
 console.log(user.location);
 
 
-// ============================================================================================
+//? ============================================================================================
 console.log('~~~~~~~~~ Objects D  Shopaholic! ~~~~~~~~');
 // Our user has purchased an item! They have purchased some "carbohydrates". Using .push(), add the string "carbohydrates" to the purchased array.
 // Our user has purchased an item! They have purchased some "peace of mind". Using .push(), add the string "peace of mind" to the purchased array.
@@ -345,7 +345,7 @@ user.purchased.push("Merino jodhpurs");
 console.log(user.purchased[user.purchased.length-1]);
 
 
-// ============================================================================================
+//? ============================================================================================
 console.log('~~~~~~~~~ Objects E  Object-within-object ~~~~~~~~');
 
 user.friend = {
@@ -370,7 +370,7 @@ user.friend.purchased.push("A latte");
 console.log(user.friend.purchased[user.friend.purchased.length-1]);
 
 
-// ============================================================================================
+// *?  ============================================================================================
 console.log('~~~~~~~~~ Objects F  Loops ~~~~~~~~');
 // Write a for loop that iterates over the User's purchased array (NOT the friend's purchased array), and prints each element to the console.
 // Write a for loop that iterates over the Friend's purchased array, and prints each element to the console.
@@ -385,22 +385,101 @@ for (const key in user.friend.purchased){
 }
 
 
+//  ============================================================================================
+console.log('~~~~~~~~~ Functions A. printGreeting ~~~~~~~~');
+
+function greetings(name){
+    console.log(`Hello there, ${name} `);
+}
+greetings("Olena");
+//  ============================================================================================
+console.log('~~~~~~~~~ Functions B. printCool ~~~~~~~~');
+
+function printCool(string){
+    console.log(string + " is cool");
+}
+printCool("Captain Reynolds");
+
+//  ============================================================================================
+console.log('~~~~~~~~~ Functions C. calculateCube ~~~~~~~~');
+
+function calculateCube(num){
+    console.log(Math.pow(num,3));
+}
+calculateCube(5);
+
+//  ============================================================================================
+console.log('~~~~~~~~~ Functions D. isVowel ~~~~~~~~');
+function isVowel (character) {
+    const vowels = ["A", "E", "I", "O", "U", "Y"];
+    character = character.toUpperCase();
+    if (vowels.includes(character)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+console.log(isVowel("A"));  // true
+console.log(isVowel("b"));  // false
+
+//  ============================================================================================
+console.log('~~~~~~~~~ Functions E. getTwoLengths ~~~~~~~~');
+
+function getTwoLengths (string1,string2){
+    const arr = [];
+    arr.push(string1.length);
+    arr.push(string2.length);
+    return arr;
+}
+console.log(getTwoLengths("Hank", "Hippopopalous"));
 
 
 
+//  ============================================================================================
+console.log('~~~~~~~~~ Functions E. getTwoLengths ~~~~~~~~');
 
 
 
+function getMultipleLengths (strings){
+    const lengths = [];
+    for (let i = 0; i < strings.length; i++) {
+        lengths.push(strings[i].length);
+    }
+    return lengths;
+}
+console.log(getMultipleLengths(["hello", "what", "is", "up", "dude"]));
 
+//  ============================================================================================
+console.log('~~~~~~~~~ Functions G. maxOfThree ~~~~~~~~');
+function maxOfThree (num1, num2, num3){
+    return Math.max(num1, num2, num3);
+}
+console.log(maxOfThree(6, 9, 1));
+//#2 
+function maxOfThree(num1, num2, num3) {
+    if (num1 >= num2 && num1 >= num3) {
+        return num1;
+    } else if (num2 >= num1 && num2 >= num3) {
+        return num2;
+    } else {
+        return num3;
+    }
+}
+console.log(maxOfThree(6, 9, 1)); 
 
+//  ============================================================================================
+console.log('~~~~~~~~~ Functions H. printLongestWord ~~~~~~~~');
 
-
-
-
-
-
-
-
+function printLongestWord (words){
+    let longestWord = "";
+    for (let word of words) {
+        if (word.length > longestWord.length) {
+            longestWord = word; 
+        }
+    }
+    return longestWord;
+}
+console.log(printLongestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanutbutter", "big", "Todd"]));
 
 
 
